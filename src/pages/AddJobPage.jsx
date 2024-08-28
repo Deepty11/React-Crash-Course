@@ -1,9 +1,8 @@
 import React, {useState} from 'react'
-import { FaCompactDisc } from 'react-icons/fa'
 import { useNavigate } from 'react-router-dom'
 
-const navigate = useNavigate()
-const AddJobPage = ({addJobSubmit}) => {
+
+const AddJobPage = ({ addJobSubmit }) => {
     const [title, setTitle] = useState("")
     const [type, setType] = useState("Full-Time")
     const [location, setLocation] = useState("")
@@ -13,6 +12,8 @@ const AddJobPage = ({addJobSubmit}) => {
     const [companyDescription, setCompanyDescription] = useState("")
     const [contactEmail, setContactEmail] = useState("")
     const [contactPhone, setContactPhone] = useState("")
+
+    const navigate = useNavigate()
 
     const submitForm = (e) => {
         e.preventDefault()
@@ -28,12 +29,11 @@ const AddJobPage = ({addJobSubmit}) => {
                 description: companyDescription,
                 contactEmail,
                 contactPhone
-            }
-            
+            },
         }
 
         addJobSubmit(newJob)
-        return navigate("/jobs")
+        return navigate('/jobs')
     }
 
   return (
@@ -48,8 +48,7 @@ const AddJobPage = ({addJobSubmit}) => {
 
             <div className="mb-4">
               <label htmlFor="type" className="block text-gray-700 font-bold mb-2"
-                >Job Type</label
-              >
+                >Job Type</label>
               <select
                 id="type"
                 name="type"
@@ -67,8 +66,7 @@ const AddJobPage = ({addJobSubmit}) => {
 
             <div className="mb-4">
               <label className="block text-gray-700 font-bold mb-2"
-                >Job Listing Name</label
-              >
+                >Job Listing Name</label>
               <input
                 type="text"
                 id="title"
@@ -84,8 +82,7 @@ const AddJobPage = ({addJobSubmit}) => {
               <label
                 htmlFor="description"
                 className="block text-gray-700 font-bold mb-2"
-                >Description</label
-              >
+                >Description</label>
               <textarea
                 id="description"
                 name="description"
@@ -99,8 +96,7 @@ const AddJobPage = ({addJobSubmit}) => {
 
             <div className="mb-4">
               <label htmlFor="type" className="block text-gray-700 font-bold mb-2"
-                >Salary</label
-              >
+                >Salary</label>
               <select
                 id="salary"
                 name="salary"
@@ -135,16 +131,14 @@ const AddJobPage = ({addJobSubmit}) => {
                 placeholder='Company Location'
                 value={location}
                 onChange={(e) => { setLocation(e.target.value)} }
-                required           
-              />
+                required/>
             </div>
 
             <h3 className="text-2xl mb-5">Company Info</h3>
 
             <div className="mb-4">
               <label htmlFor="company" className="block text-gray-700 font-bold mb-2"
-                >Company Name</label
-              >
+                >Company Name</label>
               <input
                 type="text"
                 id="company"
@@ -160,8 +154,7 @@ const AddJobPage = ({addJobSubmit}) => {
               <label
                 htmlFor="company_description"
                 className="block text-gray-700 font-bold mb-2"
-                >Company Description</label
-              >
+                >Company Description</label>
               <textarea
                 id="company_description"
                 name="company_description"
@@ -177,8 +170,7 @@ const AddJobPage = ({addJobSubmit}) => {
               <label
                 htmlFor="contact_email"
                 className="block text-gray-700 font-bold mb-2"
-                >Contact Email</label
-              >
+                >Contact Email</label>
               <input
                 type="email"
                 id="contact_email"
@@ -194,8 +186,7 @@ const AddJobPage = ({addJobSubmit}) => {
               <label
                 htmlFor="contact_phone"
                 className="block text-gray-700 font-bold mb-2"
-                >Contact Phone</label
-              >
+                >Contact Phone</label>
               <input
                 type="tel"
                 id="contact_phone"
