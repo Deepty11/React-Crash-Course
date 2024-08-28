@@ -6,6 +6,7 @@ import Spinner from './Spinner'
 
 const JobListings = ({isHome = false}) => {
   const [jobs, setJobs] = useState([])
+  
   const [loading, setLoading] = useState(true)
 
   var apiUrl = isHome 
@@ -17,6 +18,8 @@ const JobListings = ({isHome = false}) => {
       try {
         let res = await fetch(apiUrl)
         let data = await res.json()
+        console.log(res)
+        console.log(data)
 
         setJobs(data)
       } catch(error) {
