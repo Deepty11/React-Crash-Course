@@ -83,20 +83,6 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
-    },
-    {
-      "id": "40f6",
-      "title": "vbvc",
-      "type": "Full-Time",
-      "location": "nvnvb",
-      "salary": "$70K - 80K",
-      "description": "bnbnbc",
-      "company": {
-        "name": "vbnvnb",
-        "description": "nbvnvnbn",
-        "contactEmail": "test@test.com",
-        "contactPhone": ""
-      }
     }
   ]
 }
